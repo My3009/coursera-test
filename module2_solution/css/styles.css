@@ -1,13 +1,64 @@
+/* applying border-box, margin 0 and padding 0 for all the elements.
+The font of my page is going to be Serif */
 * {
 	box-sizing: border-box;
-	border: 5px solid blue;
+	margin:0;
+	padding:0;
+	font-family: Serif, sans-serif;
 }
+
+/*Let's align the title to center and give it some margin*/
+h1 {
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 40px;
+}
+
+/*I'm giving to the title box a position absolute, so i can move it
+anywhere I want. top 0 and right 0 for it to be positioned in the
+top right corner.*/
+.title_box{
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #FFA07A;
+	border: 2px solid black;
+	width: 30%;
+	height: 35px;
+	text-align: center;
+}
+
+/*It positioning is going to be relative and i tried to center them and
+let them have some margin between each one*/
+.description_box {
+	background-color: #FAFAD2;
+	position: relative;
+	width: 90%;
+	text-align: justify;
+	border: 2px solid black;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 10px;
+	padding-top: 35px;
+}
+
+/*The entire row is going to be 100% long*/
+.row {
+	width: 100%;
+}
+
+/*Lets give them a little bir of margin to the boxes when they are
+one above the other*/
+#box1, #box2, #box3 {
+	margin-bottom: 5%;
+}
+
+
 
 /*Style for the desktop view */
 @media (min-width: 992px){
-		.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg9, .col-lg-10, .col-lg-11,  .col-lg-12,{
+		.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11,  .col-lg-12{
 			float: left;
-			border: 5px solid blue;
 		}
 		.col-lg-1{
 			width: 8.33%;
@@ -49,10 +100,91 @@
 
 /*Style for the tablet view */
 @media (min-width: 768px) and (max-width: 991px){
-		
+		.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11,  .col-md-12{
+			float: left;
+		}
+		.col-md-1{
+			width: 8.33%;
+		}
+		.col-md-2{
+			width: 16.6%;
+		}
+		.col-md-3{
+			width: 25%;
+		}
+		.col-md-4{
+			width: 33.3%;
+		}
+		.col-md-5{
+			width: 41.6%;
+		}
+		.col-md-6{
+			width: 50%;
+		}
+		.col-md-7{
+			width: 58.3%;
+		}
+		.col-md-8{
+			width: 66.6%;
+		}
+		.col-md-9{
+			width: 75%;
+		}
+		.col-md-10{
+			width: 83.3%;
+		}
+		.col-md-11{
+			width: 91.3%;
+		}
+		.col-md-12{
+			width: 100%;
+		}
+
+/*This is for the third box, which is going to take the 100% of the screen*/
+		#box3 {
+	width:100%;
+}
 	}
 
 /*Style for the mobile view */
 @media (max-width: 767px){
-		
+		.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11,  .col-sm-12{
+			float: left;
+		}
+		.col-sm-1{
+			width: 8.33%;
+		}
+		.col-sm-2{
+			width: 16.6%;
+		}
+		.col-sm-3{
+			width: 25%;
+		}
+		.col-sm-4{
+			width: 33.3%;
+		}
+		.col-sm-5{
+			width: 41.6%;
+		}
+		.col-sm-6{
+			width: 50%;
+		}
+		.col-sm-7{
+			width: 58.3%;
+		}
+		.col-sm-8{
+			width: 66.6%;
+		}
+		.col-sm-9{
+			width: 75%;
+		}
+		.col-sm-10{
+			width: 83.3%;
+		}
+		.col-sm-11{
+			width: 91.3%;
+		}
+		.col-sm-12{
+			width: 100%;
+		}
 	}
